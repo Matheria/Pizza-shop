@@ -1,7 +1,10 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
+//import { Routes, Route } from 'react-router-dom';
 
-import { Home } from './pages/Home';
-import { NotFoundBlock } from './components/NotFoundBlock/index.jsx';
+// import { Home } from './pages/Home';
+// import { Cart } from './pages/Cart';
+// import { NotFound } from './pages/NotFound';
 
 import Header from './components/Header';
 
@@ -13,7 +16,12 @@ const App = () => {
       <Header />
       <div className="content">
         <div className="container">
-          <NotFoundBlock />
+          <Outlet />
+          {/* <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
+          </Routes> */}
         </div>
       </div>
     </div>
